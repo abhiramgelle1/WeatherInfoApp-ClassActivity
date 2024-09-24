@@ -11,8 +11,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Weather App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          primarySwatch: Colors.blue,
+          scaffoldBackgroundColor: Colors.lightBlue, // Set sky blue background
+          textTheme: TextTheme(
+            bodyMedium: TextStyle(
+                color: Colors.white), // Set default text color to white
+          )),
       home: WeatherScreen(),
     );
   }
