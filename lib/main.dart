@@ -25,9 +25,9 @@ class WeatherScreen extends StatefulWidget {
 
 class _WeatherScreenState extends State<WeatherScreen> {
   final TextEditingController _cityController = TextEditingController();
+  String _weatherCondition = "Weather Condition";
   String _cityName = "City Name";
   String _temperature = "Temperature";
-  String _weatherCondition = "Weather Condition";
 
   void _fetchWeather() {
     setState(() {
@@ -39,8 +39,8 @@ class _WeatherScreenState extends State<WeatherScreen> {
       List<String> weatherConditions = ['Sunny', 'Cloudy', 'Rainy'];
       String weatherCondition = weatherConditions[random.nextInt(3)];
 
-      _cityName = cityName;
       _temperature = '$temperature°C';
+      _cityName = cityName;
       _weatherCondition = weatherCondition;
     });
   }
